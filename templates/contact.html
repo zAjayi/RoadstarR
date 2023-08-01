@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Contact {% endblock title %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="zxx">
+<body>
+    <!--/contact -->
+    <section class="banner-bottom py-5">
+        <div class="container py-md-5">
+            <h3 class="title-wthree mb-lg-5 mb-4 text-center">Contact Us </h3>
+            <div class="row contact_information">
+                <div class="col-md-6">
+                    <div class="contact_right p-lg-5 p-4">
+                        <form action="#" method="post">
+                            {% csrf_token %}
+                            <div class="field-group">
+                                <div class="content-input-field">
+                                    <input name="ename" id="text1" type="text" value="{{ form.ename }}" placeholder="User Name" required>
+                                </div>
+                            </div>
+                            <div class="field-group">
+
+                                <div class="content-input-field">
+                                    <input name="eemail" id="text2" type="email" value="{{ form.eemail }}" placeholder="User Email" required>
+                                </div>
+                            </div>
+                            <div class="field-group">
+
+                                <div class="content-input-field">
+                                    <input name="econtact" id="text3" type="text" value="{{ form.econtact }}" placeholder="User Phone" required>
+                                </div>
+                            </div>
+                            <div class="field-group">
+                                <div class="content-input-field">
+                                    <textarea name="emessage" value="{{ form.emessage }}" placeholder="Your Message Here..." required></textarea>{{ form.emessage }}
+                                </div>
+                            </div>
+                            <div class="content-input-field">
+                                <button type="submit" class="btn">Submit</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6 contact_left p-4">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.8278099804547!2d7.464869373491931!3d9.0794461909839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0affdbbe3fb1%3A0xc24a2fd19ed7acc4!2se86%20Limited!5e0!3m2!1sen!2sng!4v1688546605078!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-lg-4 contact-inn-w3pvt">
+                    <div class="mt-5 information-wthree">
+                        <h4 class="text-uppercase mb-4"><span class="fa fa-comments"></span> Communication</h4>
+                        <p class="cont-wthree-para mb-3 text-capitalize">for general queries, including rental prices and other services, please email us at <a href="mailto:zemirajayi2805@gmail.com">zemirajayi2805@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-lg-4 contact-inn-w3pvt" style="margin-left: auto;">
+                    <div class="mt-5 information-wthree">
+                        <h4 class="text-uppercase mb-4"><span class="fa fa-life-ring"></span> Technical Support</h4>
+                        <p class="cont-wthree-para mb-3 text-capitalize">we are ready to help! if you have any queries or issues, contact us for support <label>+234 815 261 8099</label>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//contact -->
+
+
+    <!--/newsletter -->
+    <section class="newsletter-w3pvt py-5">
+        <div class="container py-md-5">
+            <form method="post" action="#">
+                <p class="text-center">Subscribe to the <span style="color: #ec1c24;">R</span>oadstar mailing list to receive updates on new arrivals, special offers and other discount information.</p>
+                <div class="row subscribe-sec">
+                    <div class="col-md-9">
+                        <input type="email" class="form-control" id="email" placeholder="Enter Your Email.." name="email" required="">
+
+                    </div>
+                    <div class="col-md-3">
+                        <button type="submit" class="btn submit" style="background-color: #ec1c24">Subscribe</button>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <!--//newsletter -->
+    <!--/shipping-->
+    <section class="shipping-wthree">
+        <div class="shiopping-grids d-lg-flex">
+            <div class="col-lg-4 shiopping-w3pvt-gd text-center">
+                <div class="icon-gd"><span class="fa fa-truck" aria-hidden="true"></span>
+                </div>
+                <div class="icon-gd-info">
+                    <h3>FREE SHIPPING</h3>
+                    <p>On all order over &#8358;100,000</p>
+                </div>
+            </div>
+            <div class="col-lg-4 shiopping-w3pvt-gd sec text-center">
+                <div class="icon-gd"><span class="fa fa-bullhorn" aria-hidden="true"></span></div>
+                <div class="icon-gd-info">
+                    <h3>FREE RETURN</h3>
+                    <p>On 1st exchange in 30 days</p>
+                </div>
+            </div>
+            <div class="col-lg-4 shiopping-w3pvt-gd text-center">
+                <div class="icon-gd"> <span class="fa fa-gift" aria-hidden="true"></span></div>
+                <div class="icon-gd-info">
+                    <h3>MEMBER DISCOUNT</h3>
+                    <p>Register &amp; save up to &#8358;29%</p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!--//shipping-->
+    {% endblock content %}
+</body>
+
+</html>
